@@ -37,6 +37,7 @@ git push -u origin master
 git add .
 git commit -m "git init data"
 git push
+git push --fource
 ```
 
 ---
