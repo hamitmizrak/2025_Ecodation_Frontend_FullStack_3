@@ -18,26 +18,33 @@ https://docs.emmet.io/cheat-sheet/
 
 ---
 
-## Other Keyword
+## Git Init
 
 ```sh
--
+git init
+git add .
+git commit -m "git init data"
+git remote add origin GİTHUB_URL
+git branch
+git push -u origin master
 ```
 
 ---
 
-## Other Keyword
+## Git Commit
 
 ```sh
--
+git add .
+git commit -m "git init data"
+git push
 ```
 
 ---
 
-## Other Keyword
+##  Git Clone
 
 ```sh
--
+git clone https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_3
 ```
 
 ---
