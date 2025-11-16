@@ -39,6 +39,7 @@
 ## İşlenen Konular
 - Semantic ve non-semantic yapılar nelerdir ? aralarında farklar nelerdir ?
 - 1. ve 2. dersin videolarını izliyoruz.
+- NPM nedir ? komutlarını öğreniyoruz (npm i, npm install, npm list , npm list -g, npm root)
 
 
 ## ÖDEVLER
