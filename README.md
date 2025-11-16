@@ -2,11 +2,11 @@
 
 ## 🔍 Hamit Mızrak Repo İstatistikleri
 
-![Ziyaretçi Sayısı](https://visitor-badge.laobi.icu/badge?page_id=hamitmizrak.https://github.com/hamitmizrak/2025_Ecodation_Frontend2)
-![Stars](https://img.shields.io/github/stars/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend2?style=social)
-![Forks](https://img.shields.io/github/forks/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend2?style=social)
-![Son Commit](https://img.shields.io/github/last-commit/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend2)
-![License](https://img.shields.io/github/license/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend2)
+![Ziyaretçi Sayısı](https://visitor-badge.laobi.icu/badge?page_id=hamitmizrak.https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_32)
+![Stars](https://img.shields.io/github/stars/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_32?style=social)
+![Forks](https://img.shields.io/github/forks/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_32?style=social)
+![Son Commit](https://img.shields.io/github/last-commit/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_32)
+![License](https://img.shields.io/github/license/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_32)
 
 ## 🏆 Hamit Mızrak Profil Ödülleri
 
@@ -18,7 +18,7 @@
 <br>
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=hamitmizrak&layout=compact)
 <br>
-[![Pinned Repo](https://github-readme-stats.vercel.app/api/pin/?username=hamitmizrak&repo=https://github.com/hamitmizrak/2025_Ecodation_Frontend2)](https://github.com/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend2)
+[![Pinned Repo](https://github-readme-stats.vercel.app/api/pin/?username=hamitmizrak&repo=https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_32)](https://github.com/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_32)
 
 ## 📈 Hamit Mızrak Aktivite Grafiği
 
@@ -32,7 +32,7 @@
 
 # Ecodation Full Stack Frontend -2
 
-[GitHub Address](https://github.com/hamitmizrak/2025_Ecodation_Frontend2.git)
+[GitHub Address](https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_32.git)
 
 ---
 
@@ -47,7 +47,7 @@ Bu projede kullanıcı kaydı olduğunda js üzerinden localstorage kayıt işle
 ## Linkler
 
 ```sh
-https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_3
+https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_3_FullStack_3
 https://nodejs.org/en/download
 https://github.com/signup
 https://git-scm.com/install/windows
@@ -76,7 +76,9 @@ npm init
 ---
 
 ## NPM INSTALL
+
 ## Hızlıca Projeyi ayağa kaldırmak istersek yani `npm init -y` yazmadan terminal üzerinden projeyi hızlıca ayağa kaldırmak için kullanılır.
+
 #### Tek seferde birden fazla kütüphane eklemek (-g, -D, --save --save-dev)
 
 ```sh
@@ -94,6 +96,7 @@ npm install http-server -g
 npm install http-server --save-dev
 npm install http-server -D
 ```
+
 ---
 
 ## NPM
@@ -146,8 +149,8 @@ npm view paket_adi versions
 #### Paket aramak:
 npm search paket_adi
 ```
----
 
+---
 
 ## Git Init
 
@@ -176,9 +179,9 @@ git push --fource
 ## Git Clone
 
 ```sh
-git clone https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_3
+git clone https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_3_FullStack_3
 
-cd 2025_Ecodation_Frontend3
+cd 2025_Ecodation_Frontend_FullStack_33
 npm install
 VEYA
 npm i
@@ -202,7 +205,7 @@ git branch
 git push -u origin master
 
 git remote -v
-git clone https://github.com/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend2
+git clone https://github.com/hamitmizrak/https://github.com/hamitmizrak/2025_Ecodation_Frontend_FullStack_32
 
 git log
 git reset HEAD~8
