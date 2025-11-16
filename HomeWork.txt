@@ -1,0 +1,39 @@
+
+
+1.DERS (15/11/2025)
+------------------
+## İşlenen Konular
+- Tanışma
+- Kurulumlar (VS Code, Git, Nodejs)
+- Plugin
+
+
+## ÖDEVLER
+- Html5 (W3school) bakınız ?
+- VS code kurulumu, NodeJS kurulumu, Git kurulumu 
+- Vs Code plugin yüklenecek
+- Vscode için Git entegrasyonunu video izleyiniz.
+
+*************************************************************************************
+
+2.DERS (16/11/2025)
+------------------
+## İşlenen Konular
+- Html5 konusu
+- Plugin(Html5 Boiler template, Live server)
+
+
+## ÖDEVLER
+- Ascii Charater
+- Unicode character
+- Html5 taglerini iyice çalışılacak 
+- Yazdığımız kodların tekrarı yapılacak
+- İşlen haftanın videolaro tekrar izlenecek(1,5X)
+- SEO nedir ? Neden Önemlidir ?
+- CSS nedir = (W3shool)
+- JSON Nedir ?
+- XML Nedir ?
+
+
+
+
