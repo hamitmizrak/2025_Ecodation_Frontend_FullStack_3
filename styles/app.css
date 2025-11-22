@@ -125,7 +125,37 @@ header {
   background-image: url('../images/header2.jpg');
   background-size: cover;
   background-position: center;
-  margin-top:0;
-  padding-top:15rem;
-  color: var( --text-color);
+  /* margin-top: 0;
+  padding-top: 0rem; */
+  color: var(--text-color);
+  position: relative;
 }
+
+header .container,
+header .row {
+  height: 100%;
+}
+
+#header_id .header-overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+header .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1, header h5{
+  position: relative;
+  z-index: 10;
+  text-shadow: +2px +1px 3px rgba(0,0,0,0.8);  /*+2px: X meridyeni 1px: Y meridyeni  3px : blur*/
+}
+
+
