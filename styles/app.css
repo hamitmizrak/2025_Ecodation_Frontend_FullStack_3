@@ -162,9 +162,21 @@ header h5 {
 .header-link-container {
   position: relative;
   z-index: 10;
-  margin-top: 3rem!important;
+  margin-top: 3rem !important;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem
+  gap: 0.5rem;
+}
+
+
+.header-link-container .header-link:hover{
+  background-color: rgba(255,255,255,0.15);
+  transform: translateY(-4px);
+  transition: transform 0.45s ease;
+}
+
+
+.header-link-container .header-link i:hover {
+  transition: transform 1s ease;
 }
