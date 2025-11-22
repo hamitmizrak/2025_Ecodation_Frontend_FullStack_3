@@ -43,6 +43,7 @@ Project Name: SPA
   font-family: var(--font-family);
 }
 
+
 html {
   font-size: 15px; /* 1rem = 15px */
   scroll-padding-top: 7rem;
