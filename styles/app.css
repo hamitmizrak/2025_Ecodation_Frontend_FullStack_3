@@ -138,7 +138,7 @@ header .row {
 
 #header_id .header-overlay {
   position: absolute;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   top: 0;
   left: 0;
   width: 100%;
@@ -152,10 +152,19 @@ header .row {
   align-items: center;
 }
 
-header h1, header h5{
+header h1,
+header h5 {
   position: relative;
   z-index: 10;
-  text-shadow: +2px +1px 3px rgba(0,0,0,0.8);  /*+2px: X meridyeni 1px: Y meridyeni  3px : blur*/
+  text-shadow: +2px +1px 3px rgba(0, 0, 0, 0.8); /*+2px: X meridyeni 1px: Y meridyeni  3px : blur*/
 }
 
-
+.header-link-container {
+  position: relative;
+  z-index: 10;
+  margin-top: 3rem!important;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem
+}
