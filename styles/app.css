@@ -177,7 +177,48 @@ img {
 }
 
 /* ################################################################################ */
-/* ~~~~  NAVBAR   ~~~~ */
+/* ~~~~  NAVBAR FIRST  ~~~~ */
+#navbar_first {
+  background-color: rgba(0, 0, 0) !important;
+  color: var(--text-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  opacity: 0.65 !important;
+  box-shadow: 0 2px 8px rgba(85, 108, 224, 0.5);
+  z-index: 1030; /* Diğer içeriklerin üstünde görünmesini sağlar */
+}
+
+.flag {
+  width: 1.8rem;
+  height: 20px;
+}
+
+.navbar_first_left,
+.navbar_first_right {
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  gap: 0.1rem;
+  transition: all 0.9s ease-in-out;
+}
+
+.navbar_first_left:hover,
+.navbar_first_right:hover {
+  background-color: #476ce8;
+}
+
+.navbar_first_left {
+  
+}
+
+.navbar_first_right {
+}
+
+/* ################################################################################ */
+/* ~~~~  NAVBAR SECOND  ~~~~ */
 
 /* ################################################################################ */
 /* ~~~~  HEADER   ~~~~ */
