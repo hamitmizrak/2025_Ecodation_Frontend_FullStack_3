@@ -30,9 +30,15 @@ Project Name: SPA
 :root {
   --primary-color: #3b5abc;
   --secondary-color: #ff5722;
-  --font-family: 'Fira Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --background-color: #333;
   --text-color: #f4f4f4;
+  --white-color: #fff;
+  --danger-color: #e74c3c;
+  --secondary-color: #3498db;
+  --accent-color: #8e44ad;
+  --dark-color: #000;
+  --button-radius: 8px;
+  --customise-font-family: 'Fira Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ~~~~  COMMON PROPERTIES   ~~~~ */
@@ -40,7 +46,7 @@ Project Name: SPA
   margin: 0; /* Varsayılan dış boşlukları sıfırlar */
   padding: 0px; /* Varsayılan iç boşlukları sıfırlar */
   box-sizing: border-box; /* width ve height hesaplamalarına padding ve border'ı dahil eder */
-  font-family: var(--font-family); /* root değişkeninde tanımlı özel fontu uygular */
+  font-family: var(--customise-font-family); /* root değişkeninde tanımlı özel fontu uygular */
 }
 
 html {
@@ -64,6 +70,13 @@ body {
   color: var(--text-color); /* root değişkeninde tanımlı metin rengini uygular */
   line-height: 1.5; /* Satır yüksekliğini artırarak okunabilirliği artırır */
   overflow-x: hidden; /* Yatay taşmayı engeller */
+  /* Aşağıdaki satırlar yorum satırında, ihtiyaç halinde açılabilir:
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem; */
+  padding-top: 1.6rem; /* 3rem + 3rem (iki navbar toplamı) */
 }
 
 a {
@@ -76,8 +89,15 @@ ul {
   list-style: none; /* Madde işaretlerini kaldırır */
 }
 
+button {
+  cursor: pointer; /* Buton üzerine gelindiğinde imleci el işaretine çevirir */
+}
+
 i {
-  font-size: 1.2rem; /* İkonların boyutunu ayarlar */
+  font-size: 1rem; /* İkon boyutunu 1rem yapar */
+
+  animation: 0.5s ease-in-out infinite alternate fadeIn; /* İlk animasyon (tekrarlı fade-in) */
+  animation: 3s ease-in-out fadeIn; /* İkinci animasyon: 3 saniyede bir fade-in (ilkini geçersiz kılar) */
 }
 
 i:hover {
@@ -86,30 +106,67 @@ i:hover {
   animation: 1.2s ease-in-out fadeIn; /* İkinci animasyon: 3 saniyede bir fade-in (ilkini geçersiz kılar) */
 }
 
+img {
+  max-width: 100%; /* Resimlerin konteynerini aşmamasını sağlar */
+  height: auto; /* Yüksekliği otomatik ayarlar, orantıyı korur */
+  display: block; /* Resimlerin altındaki boşlukları kaldırır */
+}
+
+/* Bütün resimlerde parlayan cam efekti*/
+.img_glare {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.img_glare img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.img_glare::before {
+  content: '';
+  position: absolute;
+  left: -60%;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.01) 100%);
+  transform: skewX(-20deg) scale(1.1);
+  opacity: 0;
+  pointer-events: none;
+  /* YAVAŞ VE YUMUŞAK GEÇİŞ */
+  transition: all 1.35s cubic-bezier(0.7, 0.14, 0.22, 0.95);
+  z-index: 2;
+}
+.img_glare:hover::before {
+  left: 100%;
+  opacity: 1;
+}
+
 /* ################################################################################ */
 /* ~~~~  LINE CLAMP   ~~~~ */
-.line-clamp-4 {
+.line_clamp_4 {
   display: -webkit-box; /* Webkit tabanlı tarayıcılarda kutu modelini kullanır */
   -webkit-box-orient: vertical; /* Kutunun dikey yönlendirilmesini sağlar */
   -webkit-line-clamp: 4; /* Metni 4 satırla sınırlar */
   overflow: hidden; /* Taşan metni gizler */
 }
 
-.line-clamp-8 {
+.line_clamp_8 {
   display: -webkit-box; /* Webkit tabanlı tarayıcılarda kutu modelini kullanır */
   -webkit-box-orient: vertical; /* Kutunun dikey yönlendirilmesini sağlar */
   -webkit-line-clamp: 8; /* Metni 8 satırla sınırlar */
   overflow: hidden; /* Taşan metni gizler */
 }
 
-.line-clamp-10 {
+.line_clamp_10 {
   display: -webkit-box; /* Webkit tabanlı tarayıcılarda kutu modelini kullanır */
   -webkit-box-orient: vertical; /* Kutunun dikey yönlendirilmesini sağlar */
   -webkit-line-clamp: 10; /* Metni 10 satırla sınırlar */
   overflow: hidden; /* Taşan metni gizler */
 }
 
-.line-clamp-15 {
+.line_clamp_15 {
   display: -webkit-box; /* Webkit tabanlı tarayıcılarda kutu modelini kullanır */
   -webkit-box-orient: vertical; /* Kutunun dikey yönlendirilmesini sağlar */
   -webkit-line-clamp: 15; /* Metni 15 satırla sınırlar */
@@ -121,35 +178,36 @@ i:hover {
 header {
   width: 100%;
   height: 45rem;
-  height: 90vh;
+  height: 90vh; /* Görünür alanın  yüksekliği */
+  /* margin-top: calc(3rem + 3rem); Üstteki 2 navbarın toplam yüksekliği kadar aşağıdan başlat */
   background-image: url('../images/header2.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: cover; /* Resmi kutunun tamamını kaplayacak şekilde ölçeklendir */
+  background-position: center; /* Resmi ortala */
   /* margin-top: 0;
   padding-top: 0rem; */
   color: var(--text-color);
-  position: relative;
+  position: relative; /* Overlay ve içeriği konumlandırabilmek için relative */
 }
 
 header .container,
 header .row {
-  height: 100%;
+  height: 100%; /* Tüm header yüksekliğini doldurur */
 }
 
-#header_id .header-overlay {
-  position: absolute;
-  background: rgba(0, 0, 0, 0.3);
+#header_id .header_overlay {
+  position: absolute; /* Header alanı üzerine konumlandırmak için absolute */
+  background: rgba(0, 0, 0, 0.3); /* Hafif siyah yarı saydam arkaplan */
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  z-index: 0;
+  height: 100%; /* Tüm alanı kapla */
+  z-index: 0; /* İçeriğin arkasında kalsın */
 }
 
 header .row {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Yatay ortalama */
+  align-items: center; /* Dikey ortalama */
 }
 
 header h1,
@@ -159,24 +217,25 @@ header h5 {
   text-shadow: +2px +1px 3px rgba(0, 0, 0, 0.8); /*+2px: X meridyeni 1px: Y meridyeni  3px : blur*/
 }
 
-.header-link-container {
-  position: relative;
-  z-index: 10;
-  margin-top: 3rem !important;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+.header_link_container {
+  position: relative; /* Overlay’in üstünde durması için */
+  z-index: 10; /* Karartmanın üst katmanında */
+  margin-top: 3rem !important; /* Başlık ile bağlantılar arasında boşluk */
+  display: flex; /* Bağlantıları yatayda hizalamak için flex */
+  justify-content: center; /* Ortaya hizala */
+  flex-wrap: wrap; /* Küçük ekranlarda alt satıra geçmesine izin ver */
+  gap: 0.5rem; /* Link kutuları arası boşluk */
 }
 
-
-.header-link-container .header-link:hover{
-  background-color: rgba(255,255,255,0.15);
+.header_link_container .header_link:hover {
+  background-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-4px);
   transition: transform 0.45s ease;
 }
 
-
-.header-link-container .header-link i:hover {
-  transition: transform 1s ease;
+.header_link-container .header_link i:hover {
+  transition: transform 1s ease; /* Hover olduğunda büyütme geçişi */
 }
+
+/* ################################################################################ */
+/* ~~~~  FOOTER  ~~~~ */
