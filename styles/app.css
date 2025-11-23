@@ -92,6 +92,18 @@ ul {
   list-style: none; /* Madde işaretlerini kaldırır */
 }
 
+p {
+  text-align: justify; /* Paragrafları iki yana yaslar */
+  margin: 1rem 2rem 3rem 4rem; /* Paragraflara dış boşluk ekler: üst 1rem, sağ 2rem, alt 3rem, sol 4rem */
+  margin: 2rem 3rem; /* Paragraflara dış boşluk ekler: üst ve alt 2rem, sağ ve sol 0 */
+}
+
+p:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
 button {
   cursor: pointer; /* Buton üzerine gelindiğinde imleci el işaretine çevirir */
 }
@@ -186,8 +198,15 @@ img {
   right: 0;
   width: 100% !important;
   opacity: 0.65 !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   box-shadow: 0 2px 8px rgba(85, 108, 224, 0.5);
-  z-index: 1030; /* Diğer içeriklerin üstünde görünmesini sağlar */
+  z-index: 1030; /* Diğer içeriklerin üstünde görünmesini sağlar  */
+  text-transform: uppercase;
+  font-weight: 300;
+  gap: 0.1rem;
+  transition: all 0.9s ease-in-out;
 }
 
 .flag {
@@ -195,28 +214,32 @@ img {
   height: 20px;
 }
 
-.navbar_first_left,
-.navbar_first_right {
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  font-weight: 300;
-  gap: 0.1rem;
-  transition: all 0.9s ease-in-out;
-}
-
 .navbar_first_left:hover,
+.navbar_first_center:hover,
 .navbar_first_right:hover {
   background-color: #476ce8;
 }
 
+/* Sol taraf */
 .navbar_first_left {
-  
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.navbar_first_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar_first_right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
+/* MEDIA QUERY */
 /* ################################################################################ */
 /* ~~~~  NAVBAR SECOND  ~~~~ */
 
