@@ -1,7 +1,7 @@
 <!-- Html5 standartına  -->
 <!doctype html>
 
-<!-- Türkçe characters do not use these characters  üğşçöİĞŞÇÖ   üğşçöİĞŞÇÖ-->
+<!-- Türkçe characters do not use these characters-->
 <!-- this page is in English -->
 <html lang="tr">
   <head>
@@ -105,15 +105,181 @@
     <link rel="stylesheet" href="./styles/app.css" />
   </head>
 
-  <body>
+  <body
+    id="body_id"
+    data-bs-spy="scroll"
+    data-bs-target="#navbar_second"
+    data-bs-offset="100"
+    tabindex="0"
+  >
     <noscript>
       Sizin tarayıcınızda JavaScript devre dışı bırakılmış. Lütfen JavaScript'i etkinleştirin ve
       sayfayı yeniden yükleyin.
     </noscript>
-
-    <span id="back_top_span"></span>
-
     <!-- APP START CODE -->
+
+    <!-- NAVBAR FIRST -->
+    <!-- nav start code -->
+    <nav id="navbar_first" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <div class="d-flex jsutify-content-between w-100">
+
+          <!-- LEFT -->
+          <ul class="nav nav_left">
+            <!-- REGISTER -->
+            <li class="nav-item">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#register_id"
+                class="nav-link text-white small"
+                title="Kayıt Ol"
+              >
+                <i class="fa-solid fa-user-gear text-warning"></i>
+              </a>
+            </li>
+
+            <!-- LOGIN -->
+            <li class="nav-item">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#login_id"
+                class="nav-link text-white small"
+                title="Kayıt Ol"
+              >
+                <i class="fa-solid fa-user-lock text-primary"></i>
+              </a>
+            </li>
+
+            <!-- FLAG (TR) -->
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white small" title="TR">
+                <img class="flag" src="./images/flag/tr.png" alt="tr" />
+              </a>
+            </li>
+
+            <!-- FLAG (EN) -->
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white small" title="EN">
+                <img class="flag" src="./images/flag/en.png" alt="tr" />
+              </a>
+            </li>
+
+            <!-- ADMIN PANEL -->
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white small" title="Admin Panel">
+                <i class="fa-solid fa-screwdriver-wrench"></i>
+              </a>
+            </li>
+
+            <!-- LOGOUT -->
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white small" title="Çıkış">
+                <i class="fa-solid fa-right-from-bracket"></i>
+              </a>
+            </li>
+          </ul>
+
+          <!-- RIGHT -->
+          <ul class="nav nav_right">
+            <!-- SOCIAL MEDIA -->
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white small" title="Youtube">
+                <i class="fa-brands fa-youtube text-warning"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white small" title="Facebook">
+                <i class="fa-brands fa-facebook text-primary"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white small" title="GitHub">
+                <i class="fa-brands fa-github text-danger"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-white small" title="Linkedin">
+                <i class="fa-brands fa-linkedin text-primary"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Register Modal -->
+    <div
+      class="modal fade"
+      id="register_id"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleId">Kayıt Ol</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Body</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="login_id"
+      tabindex="-1"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      role="dialog"
+      aria-labelledby="modalTitleId"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm"
+        role="document"
+      >
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleId">Giriş Yap</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">Body</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            <button type="button" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- nav end code -->
+
+    <!-- NAVBAR SECOND -->
     <!-- nav start code -->
     <nav></nav>
     <!-- nav end code -->
@@ -264,12 +430,14 @@
         </div>
       </div>
     </footer>
-
-    <div class="footer_bottom">&copy; 2024 - Tüm Hakları Saklıdır | Hamit Mızrak</div>
     <!-- footer end code -->
 
+    <!-- &copy; copy_right start code -->
+    <div class="footer_bottom">&copy; 2024 - Tüm Hakları Saklıdır | Hamit Mızrak</div>
+    <!-- &copy; copy_right end code -->
+
     <!-- backtotop start code -->
-    <a id="back_top_id" href="#back_top_span" title="Başa Dön">
+    <a id="back_top_id" href="#body_id" title="Başa Dön">
       <i class="fa-solid fa-circle-up"></i>
     </a>
     <!-- backtotop end code -->
