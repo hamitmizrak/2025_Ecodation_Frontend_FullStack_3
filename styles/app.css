@@ -33,6 +33,7 @@ Project Name: SPA
   --background-color: #333;
   --text-color: #f4f4f4;
   --white-color: #fff;
+  --white-warning: #bcec0e;
   --danger-color: #e74c3c;
   --secondary-color: #3498db;
   --accent-color: #8e44ad;
@@ -233,9 +234,35 @@ header h5 {
   transition: transform 0.45s ease;
 }
 
-.header_link-container .header_link i:hover {
+.header_link_container .header_link i:hover {
   transition: transform 1s ease; /* Hover olduğunda büyütme geçişi */
 }
 
 /* ################################################################################ */
 /* ~~~~  FOOTER  ~~~~ */
+
+/* ################################################################################ */
+/* ~~~~  BACK TOP  ~~~~ */
+#back_top_id {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--white-warning);
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  box-shadow: 0 4px 6px rgba(189, 79, 79, 0.9);
+  cursor: pointer;
+  opacity: 0.9;
+  transition: opacity 0.9s ease, transform 0.6s ease;
+
+  transform: scale(1);
+  z-index: 9999;
+}
