@@ -113,16 +113,19 @@
     tabindex="0"
   >
     <noscript>
-      Sizin tarayıcınızda JavaScript devre dışı bırakılmış. Lütfen JavaScript'i etkinleştirin ve
-      sayfayı yeniden yükleyin.
+      <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <strong>Sizin tarayıcınızda JavaScript devre dışı bırakılmış.</strong>
+        Lütfen JavaScript'i etkinleştirin ve sayfayı yeniden yükleyin.
+      </div>
     </noscript>
     <!-- APP START CODE -->
 
     <!-- NAVBAR FIRST -->
     <!-- nav start code -->
     <nav id="navbar_first" class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <div class="d-flex jsutify-content-between w-100">
+      <div class="container navbar_first_wrapper">
+        <div class="d-flex justify-content-between w-100">
           <!-- LEFT -->
           <ul class="nav navbar_first_left">
             <!-- REGISTER -->
@@ -145,7 +148,7 @@
                 data-bs-toggle="modal"
                 data-bs-target="#login_id"
                 class="nav-link text-white small"
-                title="Kayıt Ol"
+                title="Giriş Yap"
               >
                 <i class="fa-solid fa-user-lock text-primary"></i>
               </a>
@@ -167,8 +170,8 @@
           </ul>
 
           <!-- CENTER -->
-           <ul class="nav navbar_first_center">
-                        <!-- FLAG (TR) -->
+          <ul class="nav navbar_first_center">
+            <!-- FLAG (TR) -->
             <li class="nav-item">
               <a href="#" class="nav-link text-white small" title="TR">
                 <img class="flag" src="./images/flag/tr.png" alt="tr" />
@@ -181,7 +184,7 @@
                 <img class="flag" src="./images/flag/en.png" alt="tr" />
               </a>
             </li>
-           </ul>
+          </ul>
 
           <!-- RIGHT -->
           <ul class="nav navbar_first_right">
@@ -283,7 +286,107 @@
 
     <!-- NAVBAR SECOND -->
     <!-- nav start code -->
-    <nav></nav>
+    <!-- bs5-nav-default -->
+    <nav
+      id="navbar_second"
+      class="navbar navbar-expand-md navbar-dark wow animate__animated animate__fadeInDown"
+      data-wow-delay="0.4s"
+    >
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="/">
+          <img id="logo_id" href="/" src="./images/flag/tr.png" alt="Logo" />
+        </a>
+
+        <!-- Hamburger Menü -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menü -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#scroll_spy_works">
+                <i class="fa-solid fa-briefcase"></i>
+                Çalışmalar
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scroll_spy_success_rate">
+                <i class="fa-solid fa-chart-column"></i>
+                Başarılar
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scroll_spy_newspaper">
+                <i class="fa-solid fa-newspaper"></i>
+                Haberler
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#scroll_spy_about">
+                <i class="fa-solid fa-bullhorn"></i>
+                Hakkımızda
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#scroll_spy_blog"
+                id="dropdownId"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa-solid fa-blog"></i>
+                Blog
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#scroll_spy_blog">Yazılım</a>
+                <a class="dropdown-item" href="#scroll_spy_blog">Sağlık</a>
+                <a class="dropdown-item" href="#scroll_spy_blog">Yaşam</a>
+                <a class="dropdown-item" href="#scroll_spy_blog">Spor</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#maps">
+                <i class="fa-solid fa-map-location-dot"></i>
+                İletişim
+              </a>
+            </li>
+          </ul>
+
+          <!-- Sağ taraf: Dark Mode + Arama -->
+          <div class="nav-actions">
+            <!-- Dark Mode Butonu -->
+            <button id="dark_mode" class="dark-mode-btn">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+
+            <!-- Arama kutusu -->
+            <form class="search-form">
+              <div class="search-container">
+                <input
+                  id="search_id"
+                  type="text"
+                  class="form-control"
+                  placeholder="Site içi ara..."
+                />
+                <button class="search-button" type="submit">Ara</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- END NAVBAR SECOND -->
     <!-- nav end code -->
 
     <!-- header start code -->
