@@ -556,6 +556,10 @@ header h5 {
   background-color: rgba(0, 51, 255, 0.5);
 }
 
+#social_bar_fixed .social_link:nth-child(3) {
+  background-color: rgba(222, 33, 33, 0.966);
+}
+
 /* ################################################################################ */
 /* ~~~~  FOOTER  ~~~~ */
 footer {
