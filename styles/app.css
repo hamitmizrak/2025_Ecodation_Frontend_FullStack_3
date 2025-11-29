@@ -517,37 +517,44 @@ header h5 {
 #social_bar_fixed .social_link {
   background: var(--social-background);
   color: #fff;
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 3.1rem;
+  height: 3.1rem;
   border-radius: 50%;
   margin: 0.1rem 0;
   display: flex;
   align-items: center; /* Y düzleminde merkez */
   justify-content: center;
   font-size: 1.7rem;
-  box-shadow: 1px 2px 16px rgba(0,0,0,0.5);
+  box-shadow: 1px 2px 16px rgba(0, 0, 0, 0.5);
   cursor: pointer;
   border: 2px solid transparent;
 }
 
-#social_bar_fixed .social_link:hover{
+#social_bar_fixed .social_link:hover {
   background: #e60606;
   opacity: 0.8;
 }
 
-#social_bar_fixed .social_link:focus{
+#social_bar_fixed .social_link:not(:hover) {
+  transform: scale(0.95);
+  background-color: #111;
+  opacity: 0.8;
+  transition:
+    transform 0.25s,
+    opacity 0.28s filter 0.19s;
+}
+
+#social_bar_fixed .social_link:focus {
   background: #000;
 }
 
-#social_bar_fixed .social_link:active{
+#social_bar_fixed .social_link:active {
   background: #1207a3;
 }
 
-
-#social_bar_fixed .social_link:nth-child(1){
-  background-color: rgba(0, 51, 255,0.5);
+#social_bar_fixed .social_link:nth-child(1) {
+  background-color: rgba(0, 51, 255, 0.5);
 }
-
 
 /* ################################################################################ */
 /* ~~~~  FOOTER  ~~~~ */
